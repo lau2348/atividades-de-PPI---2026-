@@ -14,6 +14,8 @@ class Database {
         if($this->conn->connect_error){
             die("algo deu errado". $this->conn->connect_error);
         }
+
+        return $this->conn;
     }
 }
 
