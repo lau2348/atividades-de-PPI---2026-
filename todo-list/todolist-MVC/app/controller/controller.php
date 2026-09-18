@@ -2,7 +2,7 @@
 
 require_once __DIR__. '/../model/tarefa.php';
 
-class tarefaContoller{
+class tarefaController{
     private $tarefaModel;
 
     public function __construct(){
@@ -10,7 +10,7 @@ class tarefaContoller{
 
     }
     public function index(){
-        $tarefa = $this->tarefaModel->listar();
+        $tarefas = $this->tarefaModel->listar();
         include __DIR__. '/../view/listar.php';
     }
 
@@ -28,15 +28,6 @@ class tarefaContoller{
         header("Location: index.php");
     }
 }
-
-
-
-
-
-
-
-
-
 
 
 
