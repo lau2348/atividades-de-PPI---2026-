@@ -10,10 +10,10 @@ class Usuario{
         $this->conn = $db->conectar();
     }
 
-     public function buscarPorEmail(){
+     public function buscarPorEmail($email){
         $sql = " SELECT * FROM usuarios WHERE email = ?";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("s", $email);
+        $stmt->bind_param("s", $email );
         $stmt -> execute();
 
         $resultado = $stmt->get_result();
